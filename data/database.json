@@ -341,6 +341,18 @@
   },
   "enquiries": [
     {
+      "id": "enq-1794760459018",
+      "name": "Test Client",
+      "email": "client@graphndo.com",
+      "company": "GRAPHNDO Partner",
+      "projectType": "Commercials",
+      "budgetRange": ",000+",
+      "timeline": "Next 1-2 months",
+      "message": "Testing enquiry form submission end-to-end.",
+      "status": "unread",
+      "createdAt": "2026-11-15T16:34:19.018Z"
+    },
+    {
       "id": "enq-1",
       "name": "Julian H.",
       "email": "julian@arcstudio.design",
