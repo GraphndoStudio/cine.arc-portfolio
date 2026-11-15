@@ -1,0 +1,361 @@
+export interface Project {
+  id: string;
+  title: string;
+  slug: string;
+  client: string;
+  year: string;
+  category: string;
+  categorySlug: string;
+  synopsis: string;
+  description: string;
+  thumbnail: string;
+  posterImage: string;
+  videoUrl: string; // Direct mp4 or Vimeo/YouTube embed
+  videoType: "mp4" | "vimeo" | "youtube";
+  duration: string;
+  aspectRatio: string;
+  director: string;
+  dp: string;
+  colorist: string;
+  isFeatured: boolean;
+  status: "published" | "draft";
+  sortOrder: number;
+  gallery: string[];
+}
+
+export interface ServiceItem {
+  id: string;
+  title: string;
+  slug: string;
+  tagline: string;
+  description: string;
+  deliverables: string[];
+  icon: string;
+  sortOrder: number;
+  isPublished: boolean;
+}
+
+export interface SiteContent {
+  hero: {
+    badge: string;
+    headline: string;
+    subheadline: string;
+    ctaPrimary: string;
+    ctaSecondary: string;
+    showreelDuration: string;
+    showreelVideoUrl: string;
+  };
+  intro: {
+    tagline: string;
+    manifesto: string;
+    metrics: { label: string; value: string; note: string }[];
+  };
+  contact: {
+    email: string;
+    phone: string;
+    location: string;
+    studioHours: string;
+    socials: { name: string; url: string; handle: string }[];
+  };
+}
+
+export const INITIAL_PROJECTS: Project[] = [
+  {
+    id: "proj-1",
+    title: "ECHOES OF SOLITUDE",
+    slug: "echoes-of-solitude",
+    client: "ArchiForm Atelier",
+    year: "2026",
+    category: "Brand Films",
+    categorySlug: "brand-films",
+    synopsis: "An architectural sensory film exploring brutalist geometry and the relationship between concrete, natural light, and quiet contemplation.",
+    description: "Commissioned by ArchiForm Atelier, this brand film combines anamorphic 2.39:1 cinematography with organic ambient soundscapes to convey the tranquil essence of monolithic modern spaces.",
+    thumbnail: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1518173946687-a4c8a383392e?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    videoType: "mp4",
+    duration: "02:45",
+    aspectRatio: "2.39:1",
+    director: "cine.arc Studio",
+    dp: "Marcus Vance",
+    colorist: "Elena Rostov",
+    isFeatured: true,
+    status: "published",
+    sortOrder: 1,
+    gallery: [
+      "https://images.unsplash.com/photo-1513694203232-719a280e022f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1506157786151-b8491531f063?q=80&w=1200&auto=format&fit=crop",
+    ],
+  },
+  {
+    id: "proj-2",
+    title: "VORTEX KINETICS",
+    slug: "vortex-kinetics",
+    client: "Hyperion Motion",
+    year: "2026",
+    category: "Commercials",
+    categorySlug: "commercials",
+    synopsis: "High-speed precision tracking and aerodynamic lighting capturing electric performance vehicle prototypes in nocturnal urban environments.",
+    description: "A fast-paced commercial project shot on high-speed Phantom cameras and custom Russian Arm rigs to showcase acceleration dynamics, kinetic curves, and precision engineering.",
+    thumbnail: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
+    videoType: "mp4",
+    duration: "01:30",
+    aspectRatio: "2.39:1",
+    director: "cine.arc Studio",
+    dp: "Christian Meyer",
+    colorist: "Sora Takahashi",
+    isFeatured: true,
+    status: "published",
+    sortOrder: 2,
+    gallery: [
+      "https://images.unsplash.com/photo-1552519507-da3b142c6e3d?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1542282088-72c9c27ed0cd?q=80&w=1200&auto=format&fit=crop",
+    ],
+  },
+  {
+    id: "proj-3",
+    title: "TERRA NOCTURNE",
+    slug: "terra-nocturne",
+    client: "Nordic Sound Collective",
+    year: "2025",
+    category: "Music Videos",
+    categorySlug: "music-videos",
+    synopsis: "An ethereal visual poem set against volcanic black sand shores and sub-zero atmospheric mists.",
+    description: "Created for Nordic Sound Collective's ambient orchestral piece, Terra Nocturne investigates geological vulnerability through 35mm film grain, low-angle tracking, and slow-shutter optical flares.",
+    thumbnail: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1478760329108-5c3ed9d495a0?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/TearsOfSteel.mp4",
+    videoType: "mp4",
+    duration: "04:15",
+    aspectRatio: "1.85:1",
+    director: "cine.arc Studio",
+    dp: "Julian Thorne",
+    colorist: "Elena Rostov",
+    isFeatured: true,
+    status: "published",
+    sortOrder: 3,
+    gallery: [
+      "https://images.unsplash.com/photo-1509316975850-ff9c5deb0cd9?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1469474968028-56623f02e42e?q=80&w=1200&auto=format&fit=crop",
+    ],
+  },
+  {
+    id: "proj-4",
+    title: "CHRONOS HERITAGE",
+    slug: "chronos-heritage",
+    client: "Atelier Vacheron",
+    year: "2025",
+    category: "Product Films",
+    categorySlug: "product-films",
+    synopsis: "Micro-cinematography unveiling the miniature balance wheels and hand-polished bevels of haute horlogerie.",
+    description: "Using specialized probe lenses and motorized motion-control turntables, Chronos Heritage bridges centuries of artisan watchmaking with hyper-modern macro lighting.",
+    thumbnail: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1522335789203-aabd1fc54bc9?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyBlazes.mp4",
+    videoType: "mp4",
+    duration: "01:10",
+    aspectRatio: "16:9",
+    director: "cine.arc Studio",
+    dp: "Soren Lind",
+    colorist: "Marcus Vance",
+    isFeatured: true,
+    status: "published",
+    sortOrder: 4,
+    gallery: [
+      "https://images.unsplash.com/photo-1524805444758-089113d48a6d?q=80&w=1200&auto=format&fit=crop",
+    ],
+  },
+  {
+    id: "proj-5",
+    title: "WHISPERING SILENCE",
+    slug: "whispering-silence",
+    client: "Lumière Cinémathèque",
+    year: "2025",
+    category: "Cinematography",
+    categorySlug: "cinematography",
+    synopsis: "A study in natural window illumination, deep shadows, and subtle human gestures in a secluded Mediterranean villa.",
+    description: "Filmed exclusively using natural daylight and bounce reflectors, this piece demonstrates mastery of negative fill, delicate highlight rolloff, and portrait intimacy.",
+    thumbnail: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1534447677768-be436bb09401?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/WeAreGoingOnBullrun.mp4",
+    videoType: "mp4",
+    duration: "03:20",
+    aspectRatio: "1.375:1",
+    director: "cine.arc Studio",
+    dp: "Marcus Vance",
+    colorist: "Elena Rostov",
+    isFeatured: false,
+    status: "published",
+    sortOrder: 5,
+    gallery: [
+      "https://images.unsplash.com/photo-1517841905240-472988babdf9?q=80&w=1200&auto=format&fit=crop",
+    ],
+  },
+  {
+    id: "proj-6",
+    title: "THE ARTISAN'S TEMPO",
+    slug: "the-artisans-tempo",
+    client: "Maison Céramique",
+    year: "2024",
+    category: "Brand Films",
+    categorySlug: "brand-films",
+    synopsis: "Documenting the tactile rhythm of hand-thrown stoneware pottery under raw studio tungsten lighting.",
+    description: "An intimate sensory portrait capturing clay spinning, water droplets, and flame firing, recorded with synchronized high-fidelity binaural audio.",
+    thumbnail: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=1600&auto=format&fit=crop",
+    posterImage: "https://images.unsplash.com/photo-1565193566173-7a0ee3dbe261?q=80&w=2400&auto=format&fit=crop",
+    videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+    videoType: "mp4",
+    duration: "02:10",
+    aspectRatio: "2.39:1",
+    director: "cine.arc Studio",
+    dp: "Christian Meyer",
+    colorist: "Sora Takahashi",
+    isFeatured: false,
+    status: "published",
+    sortOrder: 6,
+    gallery: [],
+  },
+];
+
+export const INITIAL_SERVICES: ServiceItem[] = [
+  {
+    id: "serv-1",
+    title: "Commercial Film Production",
+    slug: "commercial-production",
+    tagline: "High-impact visual narratives engineered for modern campaigns.",
+    description: "From concept treatment to final multi-platform delivery, we produce cinematic commercial spots that demand attention, communicate brand value, and leave an indelible impression.",
+    deliverables: [
+      "Treatment & Scriptwriting",
+      "Full Production Crew & Gear",
+      "Cinema Camera Packages (ARRI / RED)",
+      "High-End Lighting & Grip",
+      "Sound Design & Bespoke Score",
+      "Multi-Format Delivery (16:9, 9:16, 4:5)",
+    ],
+    icon: "Film",
+    sortOrder: 1,
+    isPublished: true,
+  },
+  {
+    id: "serv-2",
+    title: "Brand Documentaries & Manifesto Films",
+    slug: "brand-documentaries",
+    tagline: "Uncovering authentic human stories behind visionary brands.",
+    description: "We dive deep into company heritage, founder philosophies, and craftsmanship processes, translating core values into compelling cinematic documentaries.",
+    deliverables: [
+      "Editorial Interview Direction",
+      "On-Location Field Production",
+      "Archival & B-Roll Integration",
+      "Narrative Arc Structuring",
+      "Color Grading & Finishing",
+    ],
+    icon: "Sparkles",
+    sortOrder: 2,
+    isPublished: true,
+  },
+  {
+    id: "serv-3",
+    title: "Cinematography & Camera Direction",
+    slug: "cinematography",
+    tagline: "Artistic lighting, intentional framing, and deliberate camera movement.",
+    description: "Our Directors of Photography bring deep technical expertise in optical character, anamorphic glass, natural light shaping, and motorized camera movement.",
+    deliverables: [
+      "Director of Photography (DP)",
+      "Anamorphic & Vintage Prime Lenses",
+      "Gimbal & Steadicam Operation",
+      "Precision Drone & Aerial Cinema",
+      "Low-Light & High-Speed Capabilities",
+    ],
+    icon: "Camera",
+    sortOrder: 3,
+    isPublished: true,
+  },
+  {
+    id: "serv-4",
+    title: "Music Videos & Creative Narrative",
+    slug: "music-videos",
+    tagline: "Unconstrained artistic expression marrying rhythm and imagery.",
+    description: "Collaborating with recording artists and record labels to engineer surreal visual worlds, distinct color palettes, and memorable performance captures.",
+    deliverables: [
+      "Visual Worldbuilding & Concept",
+      "Set Design & Art Direction",
+      "Performance Staging & Choreography",
+      "Stylized Color Grading",
+      "VFX & Title Design",
+    ],
+    icon: "Music",
+    sortOrder: 4,
+    isPublished: true,
+  },
+  {
+    id: "serv-5",
+    title: "Product Films & Macro Motion",
+    slug: "product-films",
+    tagline: "Sculpted lighting and micro-detail that celebrate tactile craftsmanship.",
+    description: "Dedicated tabletop studio workflows designed for luxury timepieces, design objects, spirits, and technical hardware with microscopic clarity.",
+    deliverables: [
+      "Probe & Macro Lens Cinematography",
+      "Motorized Motion Control Turntables",
+      "Precision Reflection Sculpting",
+      "Fluid & Particle Capture",
+      "Clean Beauty Retouching",
+    ],
+    icon: "Layers",
+    sortOrder: 5,
+    isPublished: true,
+  },
+  {
+    id: "serv-6",
+    title: "Color Grading & Post-Production",
+    slug: "post-production",
+    tagline: "Color science that defines tone, mood, and cinematic depth.",
+    description: "Master DaVinci Resolve color suites calibrated to DCI-P3 standards, shaping custom film print emulations (Kodak, Fuji) and seamless audio-visual polish.",
+    deliverables: [
+      "DaVinci Resolve Studio Grading",
+      "Custom Show LUT Creation",
+      "Film Grain & Texture Emulation",
+      "Bespoke Sound Design & Mix",
+      "Conforming & Master QC Delivery",
+    ],
+    icon: "Sliders",
+    sortOrder: 6,
+    isPublished: true,
+  },
+];
+
+export const INITIAL_SITE_CONTENT: SiteContent = {
+  hero: {
+    badge: "AVAILABLE FOR PRODUCTION • Q1 / Q2 2026",
+    headline: "ORGANIC CINEMATIC MINIMALISM",
+    subheadline: "An independent film and video production studio crafting authentic visual narratives with deliberate camera movement, sculpted natural light, and refined editorial rhythm.",
+    ctaPrimary: "Explore Projects",
+    ctaSecondary: "Watch Showreel [2:14]",
+    showreelDuration: "02:14",
+    showreelVideoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
+  },
+  intro: {
+    tagline: "ABOUT CINE.ARC",
+    manifesto: "We believe cinematic storytelling is not defined by excess, but by intentional restraint. Every frame is composed to evoke genuine emotion, every cut serves narrative truth, and every project is an organic collaboration between artistic vision and technical mastery.",
+    metrics: [
+      { label: "120+", value: "Projects Delivered", note: "Commercials, Brand & Music Films" },
+      { label: "09y+", value: "Production Experience", note: "Crafting visual excellence" },
+      { label: "4K/8K", value: "DCI Master Workflow", note: "Anamorphic & Large Format Glass" },
+      { label: "100%", value: "Direct Client Ownership", note: "From treatment to delivery" },
+    ],
+  },
+  contact: {
+    email: "hello@cinearc.com",
+    phone: "+1 (555) 382-4463",
+    location: "Studio 04 • Creative District",
+    studioHours: "MON — FRI : 09:00 — 18:00 GMT+5:30",
+    socials: [
+      { name: "Instagram", url: "https://instagram.com", handle: "@cine.arc" },
+      { name: "Vimeo", url: "https://vimeo.com", handle: "vimeo.com/cinearc" },
+      { name: "Behance", url: "https://behance.net", handle: "behance.net/cinearc" },
+      { name: "LinkedIn", url: "https://linkedin.com", handle: "linkedin.com/company/cinearc" },
+    ],
+  },
+};
