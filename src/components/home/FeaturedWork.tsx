@@ -28,27 +28,27 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
   });
 
   return (
-    <section className="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 bg-[#E8E9DF]">
-      <div className="max-w-7xl mx-auto">
+    <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-[#E8E9DF]">
+      <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
         {/* Section Header & Category Filter Bar */}
-        <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-10 border-b border-[#D7D9CE]">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 pb-8 border-b border-[#D7D9CE]">
           <div>
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-3">
+            <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
               <Clapperboard className="w-3.5 h-3.5 text-[#A9B887]" />
               <span>SELECTED PRODUCTIONS</span>
             </div>
-            <h2 className="text-2xl sm:text-4xl md:text-5xl font-serif font-semibold text-[#2E3D28] tracking-tight">
+            <h2 className="text-xl sm:text-3xl md:text-4xl font-serif font-semibold text-[#2E3D28] tracking-tight">
               Featured Works
             </h2>
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2">
+          <div className="flex flex-wrap items-center gap-1.5">
             {categories.map((cat) => (
               <button
                 key={cat.value}
                 onClick={() => setActiveCategory(cat.value)}
-                className={`px-4 py-1.5 rounded-full text-xs font-mono uppercase tracking-wider transition-all duration-200 ${
+                className={`px-3 py-1 rounded-full text-[11px] font-mono uppercase tracking-wider transition-all duration-200 ${
                   activeCategory === cat.value
                     ? "bg-[#2E3D28] text-[#E8E9DF] shadow-sm"
                     : "bg-[#F2F3EC] text-[#2E3D28]/70 hover:text-[#2E3D28] border border-[#D7D9CE]"
@@ -61,7 +61,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
         </div>
 
         {/* Project Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-10 pt-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-8">
           {filteredProjects.map((project, idx) => (
             <div
               key={project.id}
@@ -74,7 +74,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
               {/* Media Card Container */}
               <Link
                 href={`/work/${project.slug}`}
-                className="relative block rounded-3xl overflow-hidden bg-[#172014] border border-[#D7D9CE] aspect-[16/10] sm:aspect-[16/9] mb-5 shadow-sm group-hover:shadow-xl transition-all duration-300"
+                className="relative block rounded-3xl overflow-hidden bg-[#172014] border border-[#D7D9CE] aspect-[16/9] mb-3 shadow-sm group-hover:shadow-xl transition-all duration-300"
               >
                 {/* Poster Image */}
                 <Image
@@ -100,15 +100,15 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                 <div className="absolute inset-0 bg-gradient-to-t from-[#172014]/90 via-[#172014]/20 to-transparent z-20 pointer-events-none" />
 
                 {/* Top Corner HUD Badges */}
-                <div className="absolute top-4 left-4 right-4 z-30 flex items-center justify-between text-xs font-mono text-[#E8E9DF]">
-                  <span className="px-3 py-1 rounded-full bg-[#172014]/70 backdrop-blur-md border border-[#E8E9DF]/20 uppercase tracking-widest text-[10px]">
+                <div className="absolute top-3.5 left-3.5 right-3.5 z-30 flex items-center justify-between text-xs font-mono text-[#E8E9DF]">
+                  <span className="px-2.5 py-0.5 rounded-full bg-[#172014]/70 backdrop-blur-md border border-[#E8E9DF]/20 uppercase tracking-widest text-[9px]">
                     {project.category}
                   </span>
                   <div className="flex items-center gap-2">
-                    <span className="px-2.5 py-1 rounded-full bg-[#172014]/70 backdrop-blur-md border border-[#E8E9DF]/20 text-[10px]">
+                    <span className="px-2 py-0.5 rounded-full bg-[#172014]/70 backdrop-blur-md border border-[#E8E9DF]/20 text-[9px]">
                       {project.aspectRatio}
                     </span>
-                    <span className="px-2.5 py-1 rounded-full bg-[#A9B887] text-[#172014] font-semibold text-[10px]">
+                    <span className="px-2 py-0.5 rounded-full bg-[#A9B887] text-[#172014] font-semibold text-[9px]">
                       {project.duration}
                     </span>
                   </div>
@@ -116,24 +116,24 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
 
                 {/* Center Hover Action Icon */}
                 <div className="absolute inset-0 z-30 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
-                  <div className="h-14 w-14 rounded-full bg-[#E8E9DF] text-[#172014] flex items-center justify-center shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
-                    <Play className="w-5 h-5 fill-current ml-0.5" />
+                  <div className="h-12 w-12 rounded-full bg-[#E8E9DF] text-[#172014] flex items-center justify-center shadow-2xl transform scale-90 group-hover:scale-100 transition-transform">
+                    <Play className="w-4 h-4 fill-current ml-0.5" />
                   </div>
                 </div>
 
                 {/* Bottom Card Title & Synopsis */}
-                <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 right-4 sm:right-6 z-30">
-                  <div className="text-[11px] font-mono uppercase tracking-widest text-[#A9B887] mb-1">
+                <div className="absolute bottom-3.5 sm:bottom-5 left-3.5 sm:left-5 right-3.5 sm:right-5 z-30">
+                  <div className="text-[10px] font-mono uppercase tracking-widest text-[#A9B887] mb-0.5">
                     Client: {project.client} • {project.year}
                   </div>
-                  <h3 className="text-xl sm:text-2xl md:text-3xl font-serif font-bold text-[#E8E9DF] tracking-tight group-hover:text-[#A9B887] transition-colors">
+                  <h3 className="text-lg sm:text-2xl font-serif font-bold text-[#E8E9DF] tracking-tight group-hover:text-[#A9B887] transition-colors">
                     {project.title}
                   </h3>
                 </div>
               </Link>
 
               {/* Project Metadata Footer */}
-              <div className="flex items-center justify-between px-2 text-xs font-mono text-[#2E3D28]/80">
+              <div className="flex items-center justify-between px-1 text-[11px] font-mono text-[#2E3D28]/80">
                 <div className="flex items-center gap-2">
                   <span>DIR: {project.director}</span>
                   <span className="text-[#A9B887]">•</span>
@@ -144,7 +144,7 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
                   className="inline-flex items-center gap-1 hover:text-[#2E3D28] font-semibold transition-colors"
                 >
                   <span>View Case Film</span>
-                  <ArrowUpRight className="w-3.5 h-3.5" />
+                  <ArrowUpRight className="w-3 h-3" />
                 </Link>
               </div>
             </div>
@@ -152,13 +152,13 @@ export function FeaturedWork({ projects }: FeaturedWorkProps) {
         </div>
 
         {/* View All Works CTA */}
-        <div className="mt-16 text-center">
+        <div className="mt-12 text-center">
           <Link
             href="/work"
-            className="group inline-flex items-center gap-2 px-8 py-4 rounded-full bg-[#2E3D28] text-[#E8E9DF] text-xs uppercase tracking-widest font-semibold hover:bg-[#172014] transition-all duration-200 shadow-md hover:shadow-lg"
+            className="group inline-flex items-center gap-2 px-6 py-3 rounded-full bg-[#2E3D28] text-[#E8E9DF] text-xs uppercase tracking-widest font-semibold hover:bg-[#172014] transition-all duration-200 shadow-md hover:shadow-lg"
           >
             <span>Browse Complete Portfolio [12 Projects]</span>
-            <ArrowUpRight className="w-4 h-4 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+            <ArrowUpRight className="w-3.5 h-3.5 transition-transform group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
           </Link>
         </div>
       </div>

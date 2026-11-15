@@ -48,20 +48,20 @@ export function Navbar() {
   return (
     <>
       <header
-        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6 lg:px-12 py-3 sm:py-4 ${
+        className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 px-4 sm:px-6 lg:px-8 py-2.5 sm:py-3 ${
           scrolled
             ? "bg-[#E8E9DF]/85 backdrop-blur-md shadow-[0_4px_24px_rgba(46,61,40,0.06)] border-b border-[#D7D9CE]"
             : "bg-transparent"
         }`}
       >
-        <div className="max-w-7xl mx-auto flex items-center justify-between">
+        <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto flex items-center justify-between">
           {/* Brand Logo Lockup */}
           <Link
             href="/"
             className="group flex items-center gap-3 transition-transform duration-200 hover:scale-[1.02]"
             aria-label="cine.arc Home"
           >
-            <div className="relative h-7 sm:h-9 w-auto aspect-[1652/300]">
+            <div className="relative h-6 sm:h-7 w-auto aspect-[1652/300]">
               <Image
                 src="/brand/logo-horizontal-olive.png"
                 alt="cine.arc"
@@ -73,7 +73,7 @@ export function Navbar() {
           </Link>
 
           {/* Desktop Center Navigation Links */}
-          <nav className="hidden md:flex items-center gap-1 lg:gap-2 px-3 py-1.5 rounded-full bg-[#E8E9DF]/80 border border-[#D7D9CE] backdrop-blur-sm shadow-sm">
+          <nav className="hidden md:flex items-center gap-1 px-2.5 py-1 rounded-full bg-[#E8E9DF]/80 border border-[#D7D9CE] backdrop-blur-sm shadow-sm">
             {navLinks.map((link) => {
               const isActive =
                 link.href === "/"
@@ -83,7 +83,7 @@ export function Navbar() {
                 <Link
                   key={link.href}
                   href={link.href}
-                  className={`relative px-4 py-1.5 text-xs lg:text-sm font-medium tracking-wider uppercase transition-all duration-200 rounded-full flex items-center gap-1.5 ${
+                  className={`relative px-3.5 py-1 text-xs font-medium tracking-wider uppercase transition-all duration-200 rounded-full flex items-center gap-1.5 ${
                     isActive
                       ? "text-[#E8E9DF] bg-[#2E3D28]"
                       : "text-[#2E3D28] hover:text-[#2E3D28] hover:bg-[#D7D9CE]/60"
@@ -92,7 +92,7 @@ export function Navbar() {
                   <span>{link.label}</span>
                   {link.badge && (
                     <span
-                      className={`text-[10px] px-1.5 py-0.2 rounded-full font-mono ${
+                      className={`text-[9px] px-1.5 py-0.2 rounded-full font-mono ${
                         isActive
                           ? "bg-[#A9B887] text-[#172014]"
                           : "bg-[#2E3D28]/10 text-[#2E3D28]"
@@ -107,15 +107,15 @@ export function Navbar() {
           </nav>
 
           {/* Right Action & Studio Status */}
-          <div className="hidden lg:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-3">
             {/* Live Studio Clock & Availability */}
-            <div className="flex items-center gap-3 text-xs font-mono text-[#2E3D28]/80 bg-[#E8E9DF]/60 px-3 py-1.5 rounded-full border border-[#D7D9CE]">
+            <div className="flex items-center gap-2.5 text-[11px] font-mono text-[#2E3D28]/80 bg-[#E8E9DF]/60 px-3 py-1 rounded-full border border-[#D7D9CE]">
               <div className="flex items-center gap-1.5">
-                <span className="relative flex h-2 w-2">
+                <span className="relative flex h-1.5 w-1.5">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-[#A9B887] opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-[#2E3D28]"></span>
+                  <span className="relative inline-flex rounded-full h-1.5 w-1.5 bg-[#2E3D28]"></span>
                 </span>
-                <span className="tracking-widest uppercase text-[10px]">
+                <span className="tracking-widest uppercase text-[9px]">
                   Available
                 </span>
               </div>
@@ -131,10 +131,10 @@ export function Navbar() {
             {/* Primary Action Button */}
             <Link
               href="/contact"
-              className="group inline-flex items-center gap-1.5 px-5 py-2 rounded-full bg-[#2E3D28] text-[#E8E9DF] text-xs uppercase tracking-widest font-semibold hover:bg-[#172014] transition-all duration-200 shadow-sm hover:shadow"
+              className="group inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full bg-[#2E3D28] text-[#E8E9DF] text-[11px] uppercase tracking-widest font-semibold hover:bg-[#172014] transition-all duration-200 shadow-sm hover:shadow"
             >
               <span>Start Project</span>
-              <ArrowUpRight className="w-3.5 h-3.5 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
+              <ArrowUpRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
             </Link>
           </div>
 

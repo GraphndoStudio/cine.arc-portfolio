@@ -28,13 +28,13 @@ export default function ContactPage() {
     <div className="min-h-screen flex flex-col bg-[#E8E9DF] text-[#2E3D28]">
       <Navbar />
 
-      <main className="flex-grow pt-24">
+      <main className="flex-grow pt-16 sm:pt-20">
         {/* Contact Form Section */}
         <ContactSection />
 
         {/* Studio FAQ Section */}
-        <section className="py-20 px-4 sm:px-6 lg:px-12 bg-[#E8E9DF] border-t border-[#D7D9CE]">
-          <div className="max-w-5xl mx-auto">
+        <section className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-[#E8E9DF] border-t border-[#D7D9CE]">
+          <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
             <div className="pb-10 border-b border-[#D7D9CE] mb-12">
               <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
                 <HelpCircle className="w-3.5 h-3.5 text-[#A9B887]" />

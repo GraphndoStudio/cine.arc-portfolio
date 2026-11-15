@@ -29,24 +29,24 @@ export default function AboutPage() {
     <div className="min-h-screen flex flex-col bg-[#E8E9DF] text-[#2E3D28]">
       <Navbar />
 
-      <main className="flex-grow pt-28 sm:pt-36 pb-24 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-grow pt-20 sm:pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
           {/* Header */}
-          <div className="pb-16 border-b border-[#D7D9CE] max-w-4xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-3">
+          <div className="pb-10 border-b border-[#D7D9CE] max-w-3xl">
+            <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#A9B887]"></span>
               <span>STUDIO IDENTITY & PHILOSOPHY</span>
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-[#2E3D28] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#2E3D28] tracking-tight mb-4">
               About cine.arc
             </h1>
-            <p className="text-base sm:text-xl text-[#2E3D28]/80 leading-relaxed font-sans">
+            <p className="text-sm sm:text-base text-[#2E3D28]/80 leading-relaxed font-sans">
               We are an independent creative video production studio operating under GRAPHNDO. We unite disciplined cinematography, sculptured natural illumination, and raw human truth.
             </p>
           </div>
 
           {/* Editorial Philosophy & Visual Section */}
-          <div className="py-16 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center border-b border-[#D7D9CE]">
+          <div className="py-12 grid grid-cols-1 lg:grid-cols-12 gap-8 items-center border-b border-[#D7D9CE]">
             <div className="lg:col-span-6 space-y-6">
               <h2 className="text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/60">
                 The Creative Approach

@@ -53,70 +53,70 @@ export function ContactSection() {
   };
 
   return (
-    <section id="contact" className="py-20 sm:py-28 px-4 sm:px-6 lg:px-12 bg-[#F2F3EC]">
-      <div className="max-w-7xl mx-auto">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
+    <section id="contact" className="py-12 sm:py-16 px-4 sm:px-6 lg:px-8 bg-[#F2F3EC]">
+      <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10 items-start">
           {/* Left Column: Studio Information & Presence */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-3">
+              <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#A9B887]"></span>
                 <span>PROJECT COMMISSION</span>
               </div>
-              <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-semibold text-[#2E3D28] tracking-tight leading-tight mb-6">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl font-serif font-semibold text-[#2E3D28] tracking-tight leading-tight mb-4">
                 Let's craft your next visual story.
               </h2>
-              <p className="text-sm sm:text-base text-[#2E3D28]/80 leading-relaxed mb-8 font-sans">
+              <p className="text-xs sm:text-sm text-[#2E3D28]/80 leading-relaxed mb-6 font-sans">
                 Whether you have a fully formed script or a nascent concept requiring creative direction, we collaborate with visionary brands and agencies worldwide.
               </p>
 
-              <div className="space-y-6 pt-6 border-t border-[#D7D9CE]">
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
-                    <Mail className="w-4 h-4 text-[#2E3D28]" />
+              <div className="space-y-4 pt-4 border-t border-[#D7D9CE]">
+                <div className="flex items-start gap-3">
+                  <div className="h-8 w-8 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
+                    <Mail className="w-3.5 h-3.5 text-[#2E3D28]" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
+                    <div className="text-[9px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
                       Direct Studio Email
                     </div>
                     <a
                       href="mailto:hello@cinearc.com"
-                      className="text-base font-serif font-semibold text-[#2E3D28] hover:text-[#A9B887] transition-colors"
+                      className="text-sm font-serif font-semibold text-[#2E3D28] hover:text-[#A9B887] transition-colors"
                     >
                       hello@cinearc.com
                     </a>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
-                    <Clock className="w-4 h-4 text-[#2E3D28]" />
+                <div className="flex items-start gap-3">
+                  <div className="h-8 w-8 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
+                    <Clock className="w-3.5 h-3.5 text-[#2E3D28]" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
+                    <div className="text-[9px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
                       Working Hours
                     </div>
-                    <div className="text-sm font-sans text-[#2E3D28]">
+                    <div className="text-xs font-sans text-[#2E3D28]">
                       Mon – Fri : 09:00 – 18:00 (GMT+5:30)
                     </div>
-                    <div className="text-xs font-mono text-[#A9B887]">
+                    <div className="text-[10px] font-mono text-[#A9B887]">
                       Prompt response within 24 hours
                     </div>
                   </div>
                 </div>
 
-                <div className="flex items-start gap-4">
-                  <div className="h-10 w-10 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
-                    <MapPin className="w-4 h-4 text-[#2E3D28]" />
+                <div className="flex items-start gap-3">
+                  <div className="h-8 w-8 rounded-full bg-[#E8E9DF] border border-[#D7D9CE] flex items-center justify-center shrink-0">
+                    <MapPin className="w-3.5 h-3.5 text-[#2E3D28]" />
                   </div>
                   <div>
-                    <div className="text-[10px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
+                    <div className="text-[9px] font-mono uppercase tracking-widest text-[#2E3D28]/50">
                       Studio Presence
                     </div>
-                    <div className="text-sm font-sans text-[#2E3D28]">
+                    <div className="text-xs font-sans text-[#2E3D28]">
                       Studio 04 • Creative District
                     </div>
-                    <div className="text-xs font-mono text-[#2E3D28]/60">
+                    <div className="text-[10px] font-mono text-[#2E3D28]/60">
                       Available for worldwide production travel
                     </div>
                   </div>
@@ -125,8 +125,8 @@ export function ContactSection() {
             </div>
 
             {/* Official Brand Mark Emblem */}
-            <div className="mt-12 p-6 rounded-2xl bg-[#E8E9DF] border border-[#D7D9CE] flex items-center gap-4">
-              <div className="relative h-12 w-12 shrink-0">
+            <div className="mt-8 p-4 rounded-2xl bg-[#E8E9DF] border border-[#D7D9CE] flex items-center gap-3">
+              <div className="relative h-9 w-9 shrink-0">
                 <Image
                   src="/brand/mark-deep-olive.png"
                   alt="cine.arc"
@@ -134,7 +134,7 @@ export function ContactSection() {
                   className="object-contain"
                 />
               </div>
-              <div className="text-xs font-mono text-[#2E3D28]/70">
+              <div className="text-[11px] font-mono text-[#2E3D28]/70">
                 <div className="font-semibold text-[#2E3D28]">
                   CINE.ARC PRODUCTIONS
                 </div>
@@ -144,7 +144,7 @@ export function ContactSection() {
           </div>
 
           {/* Right Column: Interactive Enquiry Form */}
-          <div className="lg:col-span-7 bg-[#E8E9DF] p-6 sm:p-10 lg:p-12 rounded-3xl border border-[#D7D9CE] shadow-sm">
+          <div className="lg:col-span-7 bg-[#E8E9DF] p-6 sm:p-8 rounded-3xl border border-[#D7D9CE] shadow-sm">
             {submitted ? (
               <div className="py-16 text-center animate-in fade-in duration-300">
                 <div className="h-16 w-16 rounded-full bg-[#A9B887]/30 border border-[#A9B887] text-[#2E3D28] flex items-center justify-center mx-auto mb-6">

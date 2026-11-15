@@ -43,18 +43,18 @@ export default function ServicesPage() {
     <div className="min-h-screen flex flex-col bg-[#E8E9DF] text-[#2E3D28]">
       <Navbar />
 
-      <main className="flex-grow pt-28 sm:pt-36 pb-24 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-grow pt-20 sm:pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
           {/* Header */}
-          <div className="pb-16 border-b border-[#D7D9CE] max-w-4xl">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-3">
+          <div className="pb-10 border-b border-[#D7D9CE] max-w-3xl">
+            <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#A9B887]"></span>
               <span>STUDIO CAPABILITIES</span>
             </div>
-            <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-[#2E3D28] tracking-tight mb-6">
+            <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#2E3D28] tracking-tight mb-4">
               Production Services
             </h1>
-            <p className="text-base sm:text-xl text-[#2E3D28]/80 leading-relaxed font-sans">
+            <p className="text-sm sm:text-base text-[#2E3D28]/80 leading-relaxed font-sans">
               From creative concept and script treatment to master cinematography and calibrated color finishing, we provide comprehensive high-end video production services.
             </p>
           </div>
@@ -64,7 +64,7 @@ export default function ServicesPage() {
             {services.map((service, idx) => (
               <div
                 key={service.id}
-                className="py-16 sm:py-20 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-start"
+                className="py-10 sm:py-14 grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start"
               >
                 {/* Service Title & Indicator */}
                 <div className="lg:col-span-4">

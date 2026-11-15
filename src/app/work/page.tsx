@@ -51,19 +51,19 @@ export default function WorkPage() {
     <div className="min-h-screen flex flex-col bg-[#E8E9DF] text-[#2E3D28]">
       <Navbar />
 
-      <main className="flex-grow pt-28 sm:pt-36 pb-24 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-grow pt-20 sm:pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
           {/* Page Editorial Header */}
-          <div className="flex flex-col md:flex-row md:items-end justify-between gap-8 pb-12 border-b border-[#D7D9CE]">
+          <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pb-8 border-b border-[#D7D9CE]">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-3">
+              <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#2E3D28]/70 mb-2">
                 <span className="h-1.5 w-1.5 rounded-full bg-[#A9B887]"></span>
                 <span>ARCHIVAL CATALOGUE</span>
               </div>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-serif font-bold text-[#2E3D28] tracking-tight">
+              <h1 className="text-3xl sm:text-5xl font-serif font-bold text-[#2E3D28] tracking-tight">
                 Selected Work
               </h1>
-              <p className="text-sm sm:text-base text-[#2E3D28]/80 max-w-xl mt-4 font-sans leading-relaxed">
+              <p className="text-xs sm:text-sm text-[#2E3D28]/80 max-w-lg mt-2 font-sans leading-relaxed">
                 A curated body of commercials, brand narratives, and visual poems crafted across worldwide locations.
               </p>
             </div>
@@ -99,7 +99,7 @@ export default function WorkPage() {
           </div>
 
           {/* Category Filter Pills */}
-          <div className="flex flex-wrap items-center gap-2 pt-8 pb-12">
+          <div className="flex flex-wrap items-center gap-2 pt-6 pb-8">
             {categories.map((cat) => (
               <button
                 key={cat.value}

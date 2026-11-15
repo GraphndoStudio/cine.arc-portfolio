@@ -11,25 +11,25 @@ export function Footer() {
   };
 
   return (
-    <footer className="bg-[#2E3D28] text-[#E8E9DF] pt-16 sm:pt-24 pb-12 border-t border-[#35462F] relative overflow-hidden">
+    <footer className="bg-[#2E3D28] text-[#E8E9DF] pt-12 sm:pt-16 pb-8 border-t border-[#35462F] relative overflow-hidden">
       {/* Background Subtle Arc Brand Glow */}
-      <div className="absolute -bottom-24 right-0 w-96 h-96 opacity-10 pointer-events-none">
+      <div className="absolute -bottom-24 right-0 w-80 h-80 opacity-10 pointer-events-none">
         <Image
           src="/brand/mark-white.png"
           alt=""
-          width={500}
-          height={500}
+          width={400}
+          height={400}
           className="object-contain"
         />
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-12 relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 lg:gap-8 pb-16 border-b border-[#3F5237]">
+      <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-6 pb-10 border-b border-[#3F5237]">
           {/* Brand Column */}
           <div className="lg:col-span-5 flex flex-col justify-between">
             <div>
-              <Link href="/" className="inline-block mb-6">
-                <div className="relative h-10 w-44">
+              <Link href="/" className="inline-block mb-4">
+                <div className="relative h-8 w-36">
                   <Image
                     src="/brand/logo-horizontal-white.png"
                     alt="cine.arc"
@@ -38,14 +38,14 @@ export function Footer() {
                   />
                 </div>
               </Link>
-              <p className="text-sm text-[#E8E9DF]/80 max-w-sm leading-relaxed font-sans">
+              <p className="text-xs sm:text-sm text-[#E8E9DF]/80 max-w-sm leading-relaxed font-sans">
                 An independent cinematic video production studio. We unite deliberate cinematography, natural light sculpting, and authentic human narrative to craft memorable films for forward-thinking brands.
               </p>
             </div>
 
-            <div className="mt-8 pt-8 border-t border-[#3F5237] flex items-center gap-3">
-              <span className="flex h-2 w-2 rounded-full bg-[#A9B887]"></span>
-              <span className="text-xs font-mono uppercase tracking-widest text-[#E8E9DF]/70">
+            <div className="mt-6 pt-6 border-t border-[#3F5237] flex items-center gap-2.5">
+              <span className="flex h-1.5 w-1.5 rounded-full bg-[#A9B887]"></span>
+              <span className="text-[10px] font-mono uppercase tracking-widest text-[#E8E9DF]/70">
                 Operating Globally • Studio Based
               </span>
             </div>

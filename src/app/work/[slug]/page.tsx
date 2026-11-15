@@ -46,19 +46,19 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
     <div className="min-h-screen flex flex-col bg-[#E8E9DF] text-[#2E3D28]">
       <Navbar />
 
-      <main className="flex-grow pt-28 sm:pt-36 pb-24 px-4 sm:px-6 lg:px-12">
-        <div className="max-w-7xl mx-auto">
+      <main className="flex-grow pt-20 sm:pt-24 pb-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-5xl 2xl:max-w-[1100px] mx-auto">
           {/* Breadcrumb & Back Link */}
-          <div className="flex items-center justify-between mb-8 pb-4 border-b border-[#D7D9CE]">
+          <div className="flex items-center justify-between mb-6 pb-3 border-b border-[#D7D9CE]">
             <Link
               href="/work"
-              className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-widest text-[#2E3D28]/70 hover:text-[#2E3D28] transition-colors group"
+              className="inline-flex items-center gap-2 text-[11px] font-mono uppercase tracking-widest text-[#2E3D28]/70 hover:text-[#2E3D28] transition-colors group"
             >
-              <ArrowLeft className="w-3.5 h-3.5 transition-transform group-hover:-translate-x-0.5" />
+              <ArrowLeft className="w-3 h-3 transition-transform group-hover:-translate-x-0.5" />
               <span>Back to Works Archive</span>
             </Link>
 
-            <div className="flex items-center gap-3 text-xs font-mono text-[#2E3D28]/60">
+            <div className="flex items-center gap-2 text-[11px] font-mono text-[#2E3D28]/60">
               <span>{project.category}</span>
               <span>•</span>
               <span>{project.year}</span>
@@ -66,15 +66,15 @@ export default async function ProjectDetailPage({ params }: ProjectPageProps) {
           </div>
 
           {/* Project Title & Client Header */}
-          <div className="max-w-4xl mb-10">
-            <div className="inline-flex items-center gap-2 text-xs font-mono uppercase tracking-[0.25em] text-[#A9B887] mb-3">
+          <div className="max-w-2xl mb-8">
+            <div className="inline-flex items-center gap-2 text-[10px] font-mono uppercase tracking-[0.25em] text-[#A9B887] mb-2">
               <span className="h-1.5 w-1.5 rounded-full bg-[#2E3D28]"></span>
               <span>COMMISSIONED PRODUCTION</span>
             </div>
-            <h1 className="text-3xl sm:text-5xl md:text-6xl font-serif font-bold text-[#2E3D28] tracking-tight leading-tight mb-4">
+            <h1 className="text-2xl sm:text-4xl md:text-5xl font-serif font-bold text-[#2E3D28] tracking-tight leading-tight mb-3">
               {project.title}
             </h1>
-            <p className="text-base sm:text-xl text-[#2E3D28]/80 font-sans leading-relaxed">
+            <p className="text-sm sm:text-base text-[#2E3D28]/80 font-sans leading-relaxed">
               {project.synopsis}
             </p>
           </div>
