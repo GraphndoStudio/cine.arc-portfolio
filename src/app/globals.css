@@ -1,0 +1,83 @@
+@import "tailwindcss";
+
+@theme {
+  --color-brand-soft-white: #E8E9DF;
+  --color-brand-soft-white-surface: #F2F3EC;
+  --color-brand-soft-white-border: #D7D9CE;
+  
+  --color-brand-sage: #A9B887;
+  --color-brand-sage-light: #BDC9A2;
+  --color-brand-sage-dark: #849463;
+  --color-brand-sage-muted: #5B6645;
+  
+  --color-brand-deep-olive: #2E3D28;
+  --color-brand-deep-olive-light: #3F5237;
+  --color-brand-deep-olive-dark: #222E1E;
+  
+  --color-brand-cinema-dark: #172014;
+  --color-brand-cinema-surface: #202B1D;
+  --color-brand-cinema-card: #263322;
+  --color-brand-cinema-border: #35462F;
+}
+
+:root {
+  --bg-main: #E8E9DF;
+  --text-main: #2E3D28;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #E8E9DF;
+  color: #2E3D28;
+}
+
+body {
+  background-color: #E8E9DF;
+  color: #2E3D28;
+  font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::selection {
+  background-color: #A9B887;
+  color: #172014;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #E8E9DF;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #A9B887;
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #2E3D28;
+}
+
+/* Subtle Film Grain Overlay */
+.cinema-film-grain {
+  background-image: radial-gradient(rgba(46, 61, 40, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
+
+/* Anamorphic aspect ratio helpers */
+.aspect-cinemascope {
+  aspect-ratio: 2.39 / 1;
+}
+
+.aspect-academy {
+  aspect-ratio: 1.375 / 1;
+}
+
+.aspect-dci {
+  aspect-ratio: 1.896 / 1;
+}
